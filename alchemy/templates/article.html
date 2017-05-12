@@ -50,11 +50,11 @@
 {% if article.share_post and article.status != 'draft' %}
 <section>
     <p id="post-share-links">
-        Share:
-        <a class="fa fa-twitter" href="{{article.share_post['twitter']}}" target="_blank" title="Share on Twitter"></a>
-        <a class="fa fa-facebook" href="{{article.share_post['facebook']}}" target="_blank" title="Share on Facebook"></a>
-        <a class="fa fa-google-plus" href="{{article.share_post['google-plus']}}" target="_blank" title="Share on Google Plus"></a>
-        <a class="fa fa-envelope" href="{{article.share_post['email']}}" target="_blank" title="Share via Email"></a>
+        {{ TR['share'] }}:
+        <a class="fa fa-twitter" href="{{article.share_post['twitter']}}" target="_blank" title="{{ TR['share-twitter'] }}"></a>
+        <a class="fa fa-facebook" href="{{article.share_post['facebook']}}" target="_blank" title="{{ TR['share-facebook'] }}"></a>
+        <a class="fa fa-google-plus" href="{{article.share_post['google-plus']}}" target="_blank" title="{{ TR['share-google-plus'] }}"></a>
+        <a class="fa fa-envelope" href="{{article.share_post['email']}}" target="_blank" title="{{ TR['share-email'] }}"></a>
     </p>
 </section>
 {% endif %}
