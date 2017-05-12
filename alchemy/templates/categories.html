@@ -14,6 +14,9 @@
   <tr>
     <td><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></td>
     <td>{{ articles|count }}</td>
+    {% if CATEGORY_FEED_ATOM %}
+    <td><a href="{{ CATEGORY_FEED_ATOM|format(category.slug) }}">RSS</a></td>
+    {% endif %}
   </tr>
   {% endfor %}
 </table>
